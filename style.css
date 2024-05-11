@@ -1,0 +1,113 @@
+* {
+  margin: 0px ;
+  padding: 0px ;
+  box-sizing: border-box;
+}
+.container-hero-section {
+  box-sizing: border-box;
+}
+.hero-container {
+  max-width: 1180px;
+  margin: 0 auto !important;
+}
+.hero-img-box {
+  width: 100%;
+  height: 100vh;
+  border-radius: 20px;
+  margin: 0px auto;
+  background-image: url("./img/header-image.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid #156a48;
+  overflow: hidden;
+}
+
+.hero-marquee-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@font-face {
+  font-family: "Whyte-Book";
+  src: url(./fonts/Whyte-Medium.ttf);
+}
+
+.marquee-one,
+.marquee-two {
+  color: #156a48;
+  font-size: 20px;
+  font-weight: 700;
+  font-weight: bold;
+  font-family: "Whyte-Book", sans-serif; /* Use the correct font family name here */
+
+  position: relative;
+  margin: auto;
+  height: 80px;
+  overflow-x: hidden;
+  background-color: #212121;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 0 40px rgba(71, 182, 120, 0.6);
+  border-radius: 10px;
+  width: calc(100% + 250px) !important;
+}
+.marquee-one {
+  top: 5%;
+  left: -10%;
+  right: 0;
+  transform: rotate(-29deg);
+}
+.marquee-two {
+  top: 0%;
+  left: -8%;
+  transform: rotate(29deg);
+}
+.marquee-track-content p {
+  margin: 0;
+}
+.marquee-track {
+  position: absolute;
+  height: 100%;
+
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-one 45s linear infinite;
+}
+.marquee-track-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+}
+@keyframes marquee-one {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width:0px) and (max-width:460px) {
+  .hero-container {
+    margin: 0px 20px !important;
+    
+  }
+  .hero-img-box {
+    height: 60vh;
+  }
+  .marquee-one {
+    top: 35%;
+    left: -20%;
+    transform: rotate(20deg);
+  }
+  .marquee-two {
+    top: -22%;
+    left: -20%;
+    transform: rotate(-20deg);
+  }
+}
