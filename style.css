@@ -57,15 +57,15 @@
   width: calc(100% + 250px) !important;
 }
 .marquee-one {
-  top: 5%;
+  bottom: -26%;
   left: -10%;
   right: 0;
-  transform: rotate(-29deg);
+  transform: rotate(-26deg);
 }
 .marquee-two {
-  top: 0%;
-  left: -8%;
-  transform: rotate(29deg);
+  top: -26%;
+  left: -10%;
+  transform: rotate(26deg);
 }
 .marquee-track-content p {
   margin: 0;
@@ -76,7 +76,7 @@
 
   white-space: nowrap;
   will-change: transform;
-  animation: marquee-one 45s linear infinite;
+  animation: marquee-one 35s linear infinite;
 }
 .marquee-track-content {
   display: flex;
@@ -92,7 +92,7 @@
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width:0px) and (max-width:460px) {
+@media screen and (min-width: 0px) and (max-width: 460px) {
   .hero-container {
     margin: 0px 20px !important;
     
